@@ -12,6 +12,7 @@ using namespace std;
 
 class CellMgr;
 
+//class point to record the x-coordination and y-coordination info
 class Point
 {
 public:
@@ -44,6 +45,7 @@ bool Point::operator==(const Point &other)
 		return false;
 }
 
+//a cell whose state is live or dead, and can change its states
 class Cell
 {
 public:
@@ -58,11 +60,12 @@ public:
 	inline void SetStates(const char &c){m_cStates = c;}
 
 private:
-	Point m_ptPos;
+	Point m_ptPos;						
 	char m_cStates;
 };
 
 
+//a singleton to manage the cells
 class CellMgr
 {
 public:

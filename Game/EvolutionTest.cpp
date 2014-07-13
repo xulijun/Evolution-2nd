@@ -113,9 +113,9 @@ int CellMgr::GetNeighboursNum(Cell * const pCell)
 	Cell newCell(*pCell);
 	vector<Cell>::iterator iter;
 
-	for (int j = pCell->GetPosition().Y - 1; j < pCell->GetPosition().Y + 1; ++j)
+	for (int j = pCell->GetPosition().Y - 1; j <= pCell->GetPosition().Y + 1; ++j)
 	{
-		for (int i = pCell->GetPosition().X - 1; i < pCell->GetPosition().X + 1; ++i)
+		for (int i = pCell->GetPosition().X - 1; i <= pCell->GetPosition().X + 1; ++i)
 		{
 			newCell.SetPoint(i, j);
 			if (m_bShowOne)
